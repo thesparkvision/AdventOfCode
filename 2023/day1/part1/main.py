@@ -12,7 +12,7 @@ def main():
     final_sum = 0
 
     print("Reading Input File ...")
-    with open("input.txt", "r") as input_file:
+    with open("../input.txt", "r") as input_file:
         for line in input_file:
             calibration_value = get_calibration_value(line)
             final_sum += calibration_value
