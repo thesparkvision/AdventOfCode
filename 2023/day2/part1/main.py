@@ -18,7 +18,7 @@ def find_valid_game_ids(game_lines, BLUE_BAG_CONFIG):
             _, game_id = game_name.split(" ")
             game_id = int(game_id)
             valid_games.append(game_id)
-    print(valid_games, "debug")
+            
     return valid_games
 
 def main():
