@@ -43,10 +43,16 @@ def main() -> None:
     with open("../input.txt", "r") as input_file:
         lines = [line.strip().split(":")[1] for line in input_file]
             
-    times_data = list(map(int,lines[0].split()))
-    distances_data = list(map(int,lines[1].split()))
+    single_race_time = "".join(lines[0].split())
+    single_race_record_distance = "".join(lines[1].split())
 
-    no_of_winning_ways_data = find_no_of_winning_ways_data(times_data, distances_data)
+    times = [int(single_race_time)]
+    distances = [int(single_race_record_distance)]
+
+    no_of_winning_ways_data = find_no_of_winning_ways_data(
+        times,
+        distances
+    )
     
     product = 1
     for no_of_winning_ways in no_of_winning_ways_data:
